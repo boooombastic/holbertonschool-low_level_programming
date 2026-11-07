@@ -16,7 +16,7 @@ void print_menu(void)
 }
 
 /**
- * main - simple calculator entry point with addition and subtraction
+ * main - simple calculator entry point with add, sub, and mul
  *
  * Return: Always 0 (Success)
  */
@@ -58,6 +58,16 @@ int main(void)
 			if (scanf("%d", &b) != 1)
 				break;
 			printf("Result: %d\n", a - b);
+		}
+		else if (choice == 3)
+		{
+			printf("A: ");
+			if (scanf("%d", &a) != 1)
+				break;
+			printf("B: ");
+			if (scanf("%d", &b) != 1)
+				break;
+			printf("Result: %d\n", a * b);
 		}
 		else if (choice < 0 || choice > 4)
 		{
