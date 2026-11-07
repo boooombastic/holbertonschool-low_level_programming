@@ -16,13 +16,14 @@ void print_menu(void)
 }
 
 /**
- * main - simple calculator entry point with menu loop and validation
+ * main - simple calculator entry point with menu loop and addition
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int choice;
+	int a, b;
 	int running = 1;
 
 	while (running)
@@ -37,6 +38,16 @@ int main(void)
 		{
 			printf("Bye!\n");
 			running = 0;
+		}
+		else if (choice == 1)
+		{
+			printf("A: ");
+			if (scanf("%d", &a) != 1)
+				break;
+			printf("B: ");
+			if (scanf("%d", &b) != 1)
+				break;
+			printf("Result: %d\n", a + b);
 		}
 		else if (choice < 0 || choice > 4)
 		{
